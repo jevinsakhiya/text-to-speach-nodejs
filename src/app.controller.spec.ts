@@ -20,13 +20,11 @@ describe('AppController', () => {
 
   it('should speak text without throwing error', async () => {
     await expect(
-      appController.RunTTS('Success TTS module'),
+      appController.tts('Success TTS module'),
     ).resolves.toBeUndefined();
   });
 
   it('should throw error on empty text', async () => {
-    await expect(appController.RunTTS('')).rejects.toThrow(
-      'Text cannot be empty',
-    );
+    await expect(appController.tts('')).rejects.toThrow('Text cannot be empty');
   });
 });

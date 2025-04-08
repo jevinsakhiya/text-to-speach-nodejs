@@ -10,7 +10,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  async RunTTS(str: string): Promise<void> {
+  async tts(str: string): Promise<void> {
     return this.appService.tts(str);
   }
 }
